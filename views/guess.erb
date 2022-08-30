@@ -1,0 +1,34 @@
+<body>
+    <h1><%= @random_artist_name %> 5 most popular songs are ...</h1>
+    
+    <form method="POST" action="/results">
+    <% @top_tracks.each_with_index do |track, index| %>
+        <h2><%= track %><h2>
+        
+        
+        <label><%= index + 1 %></label>
+        <input type="text" name="guess_song_<%= index + 1 %>">
+        
+        <input type="hidden" name="real_song_<%= index + 1 %>" value="<%= track %>">
+        
+    <% end %>
+    <input type="submit" value="Submit">
+    <form>
+
+    <%# <form method="POST" action="/results">
+    <label>1. </label>
+    <input type="text">
+    
+    <label>2. </label>
+    <input type="text">
+    
+    <label>3. </label>
+    <input type="text">
+    
+    <label>4. </label>
+    <input type="text">
+    
+    <label>5. </label>
+    <input type="text">
+    <form> %>
+</body>
