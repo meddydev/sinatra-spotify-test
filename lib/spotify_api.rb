@@ -50,8 +50,9 @@ class SpotifyApi
     top_tracks
   end
 
-  def get_me
-    json = get_json("/me")
+#   def get_me
+#     json = get_json("/me")
+#   end
 
   private
 
